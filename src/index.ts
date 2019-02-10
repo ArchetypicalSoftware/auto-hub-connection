@@ -67,7 +67,7 @@ export class AutoHubConnection {
    * @param {any[]} args The arguments used to invoke the server method.
    * @returns {Promise<T>} A Promise that resolves with the result of the server method (if any), or rejects with an error.
    */
-  public invoke(methodName: string, ...args: any[]) {
+  public async invoke(methodName: string, ...args: any[]) {
     return HubConnection.prototype.invoke.apply(this.connection!, arguments as any);
   }
 
@@ -76,7 +76,7 @@ export class AutoHubConnection {
    * @param {string} methodName The name of the hub method to define.
    * @param {Function} newMethod The handler that will be raised when the hub method is invoked.
    */
-  public on(methodName: string, newMethod: (...args: any[]) => void) {
+  public async on(methodName: string, newMethod: (...args: any[]) => void) {
     return this.connection!.on(methodName, newMethod);
   }
 
@@ -101,7 +101,7 @@ export class AutoHubConnection {
    * @param {any[]} args The arguments used to invoke the server method.
    * @returns {Promise<void>} A Promise that resolves when the invocation has been successfully sent, or rejects with an error.
    */
-  public send(methodName: string, ...args: any[]): Promise<void> {
+  public async send(methodName: string, ...args: any[]): Promise<void> {
     return HubConnection.prototype.send.apply(this.connection, arguments as any);
   }
 
