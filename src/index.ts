@@ -76,8 +76,8 @@ export class AutoHubConnection {
    * @param {string} methodName The name of the hub method to define.
    * @param {Function} newMethod The handler that will be raised when the hub method is invoked.
    */
-  public async on(methodName: string, newMethod: (...args: any[]) => void) {
-    return this.connection!.on(methodName, newMethod);
+  public on(methodName: string, newMethod: (...args: any[]) => void) {
+    this.connection!.on(methodName, newMethod);
   }
 
   /** Removes the all handlers or a specified handler for the specified hub method.
