@@ -15,7 +15,7 @@ describe('tests', () => {
     connection = new MockHubConnection();
     builder = new MockHubConnectionBuilder(connection);
 
-    mockHubConnectionBuilder.mockImplementation(() => builder);
+    mockHubConnectionBuilder.mockImplementation(() => (builder as unknown) as signalR.HubConnectionBuilder);
 
     invokeProto = signalr.HubConnection.prototype.invoke = jest.fn();
 

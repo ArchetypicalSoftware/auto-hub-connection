@@ -4,6 +4,7 @@ export class MockHubConnectionBuilder {
   public build = jest.fn(() => this.connection);
   public configureLogging = jest.fn(() => this);
   public withUrl = jest.fn(() => this);
+  public withHubProtocol = jest.fn(() => this);
 
   private connection: MockHubConnection;
 
