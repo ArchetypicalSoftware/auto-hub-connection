@@ -1,5 +1,5 @@
 # AutoHubConnection
-
+ 
 AutoHubConnection is a simple wrapper to the .net core signalr client implementation. It automates the logic necessary to reconnecting after a unexpected disconnect.
 
 ## Installation
