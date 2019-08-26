@@ -17,6 +17,7 @@
   "license": "LGPL-3.0-or-later",
   "devDependencies": {
     "@types/jest": "^23.3.13",
+    "@types/node": "^12.7.2",
     "jest": "^23.6.0",
     "prettier": "^1.15.3",
     "ts-jest": "^23.10.5",
