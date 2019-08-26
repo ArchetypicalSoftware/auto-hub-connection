@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint -p tsconfig.json",
-    "test": "jest -c jestconfig.json",
+    "test": "jest -c jestconfig.json --coverage",
     "prepare": "yarn run build && yarn run lint",
     "prepublishOnly": "yarn test"
   },
